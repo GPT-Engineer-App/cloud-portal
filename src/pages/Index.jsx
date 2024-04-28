@@ -1,15 +1,19 @@
-// Complete the Index page component here
-// Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Box, Flex, Heading, Text, Button, Image } from '@chakra-ui/react';
+import { FaArrowRight } from 'react-icons/fa';
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <Box>
+      <Flex direction="column" align="center" justify="center" minH="100vh" bg="brand.700" color="white">
+        <Heading as="h1" size="2xl" mb="4">Welcome to GPT Engineer</Heading>
+        <Text fontSize="xl" mb="8">Revolutionizing web development with AI-driven solutions.</Text>
+        <Button rightIcon={<FaArrowRight />} colorScheme="blue" variant="solid">
+          Get Started
+        </Button>
+      </Flex>
+      <Image src="/images/landing-page-hero.jpg" alt="Innovative AI Solutions" />
+    </Box>
+  );
 };
 
 export default Index;
